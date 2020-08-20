@@ -30,19 +30,26 @@ abstract class BaseFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(item.itemId == R.id.menu_principal_deslogar){
             loginViewModel.desloga()
-            vaiParaLogin()
+//            vaiParaLogin()
+            vaiParaInicio()
         }
+
         return super.onOptionsItemSelected(item)
     }
 
-    private fun vaiParaLogin() {
-        val direcao = NavGraphDirections.acaoGlobalLogin()
+    private fun vaiParaInicio(){
+        val direcao = NavGraphDirections.acaoGlobalInicio()
         controlador.navigate(direcao)
     }
 
+//    private fun vaiParaLogin() {
+//        val direcao = NavGraphDirections.acaoGlobalLogin()
+//        controlador.navigate(direcao)
+//    }
+
     private fun verificaSeEstaLogado() {
         if (loginViewModel.naoEstaLogado()) {
-            vaiParaLogin()
+            vaiParaInicio()
         }
     }
 

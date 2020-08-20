@@ -75,7 +75,7 @@
                 app:exitAnim="@anim/nav_default_exit_anim"
                 app:popEnterAnim="@anim/nav_default_pop_enter_anim"
                 app:popExitAnim="@anim/nav_default_pop_exit_anim"
-                app:popUpTo="@+id/login"
+                app:popUpTo="@id/login"
                 app:popUpToInclusive="true" />
             <action
                 android:id="@+id/acao_login_para_cadastroUsuario"
@@ -101,4 +101,28 @@
         android:name="br.com.alura.aluraesporte.MinhaContaFragment"
         android:label="Minha conta"
         tools:layout="@layout/minha_conta" />
+    <fragment
+        android:id="@+id/inicio"
+        android:name="br.com.alura.aluraesporte.InicioFragment"
+        android:label="Inicio"
+        tools:layout="@layout/inicio" >
+        <action
+            android:id="@+id/acao_inicio_para_listaProdutos"
+            app:destination="@id/listaProdutos"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/inicio"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action
+        android:id="@+id/acao_global_inicio"
+        app:destination="@id/inicio"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@id/listaProdutos"
+        app:popUpToInclusive="true" />
 </navigation>
